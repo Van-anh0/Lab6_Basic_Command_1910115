@@ -52,6 +52,12 @@
     <Compile Include="AccountManagerForm.Designer.cs">
       <DependentUpon>AccountManagerForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddNewAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddNewAccount.Designer.cs">
+      <DependentUpon>AddNewAccount.cs</DependentUpon>
+    </Compile>
     <Compile Include="BillDetailsForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,11 +70,11 @@
     <Compile Include="BillsForm.Designer.cs">
       <DependentUpon>BillsForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="CategoryForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="CategoryForm.Designer.cs">
+      <DependentUpon>CategoryForm.cs</DependentUpon>
     </Compile>
     <Compile Include="frmFood.cs">
       <SubType>Form</SubType>
@@ -81,14 +87,17 @@
     <EmbeddedResource Include="AccountManagerForm.resx">
       <DependentUpon>AccountManagerForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AddNewAccount.resx">
+      <DependentUpon>AddNewAccount.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BillDetailsForm.resx">
       <DependentUpon>BillDetailsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BillsForm.resx">
       <DependentUpon>BillsForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="CategoryForm.resx">
+      <DependentUpon>CategoryForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmFood.resx">
       <DependentUpon>frmFood.cs</DependentUpon>

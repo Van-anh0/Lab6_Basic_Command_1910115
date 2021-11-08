@@ -16,7 +16,7 @@ namespace Lab6_Basic_Command_1910115
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new AccountManagerForm());
+            Application.Run(new CategoryForm());
         }
     }
 }

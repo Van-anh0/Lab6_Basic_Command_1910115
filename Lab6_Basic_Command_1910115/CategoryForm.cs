@@ -11,9 +11,9 @@ using System.Data.SqlClient;
 
 namespace Lab6_Basic_Command_1910115
 {
-    public partial class Form1 : Form
+    public partial class CategoryForm : Form
     {
-        public Form1()
+        public CategoryForm()
         {
             InitializeComponent();
         }
@@ -247,6 +247,18 @@ namespace Lab6_Basic_Command_1910115
                 foodForm.Show(this);
                 foodForm.LoadFood(int.Parse(txtID.Text));
             }
+        }
+
+        private void btnBillsForm_Click(object sender, EventArgs e)
+        {
+            BillsForm billsForm = new BillsForm();
+            billsForm.Show();
+        }
+
+        private void btnAccount_Click(object sender, EventArgs e)
+        {
+            AccountManagerForm accountManagerForm = new AccountManagerForm();
+            accountManagerForm.Show();
         }
     }
 }

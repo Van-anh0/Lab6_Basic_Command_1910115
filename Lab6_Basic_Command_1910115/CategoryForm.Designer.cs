@@ -1,7 +1,7 @@
 ﻿
 namespace Lab6_Basic_Command_1910115
 {
-    partial class Form1
+    partial class CategoryForm
     {
         /// <summary>
         /// Required designer variable.
@@ -35,6 +35,9 @@ namespace Lab6_Basic_Command_1910115
             this.chID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.chName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.chType = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.tsmiDelete = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiViewFood = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -44,9 +47,9 @@ namespace Lab6_Basic_Command_1910115
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.tsmiDelete = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiViewFood = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnBillsForm = new System.Windows.Forms.Button();
+            this.btnAccount = new System.Windows.Forms.Button();
+            this.btnTable = new System.Windows.Forms.Button();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -92,6 +95,29 @@ namespace Lab6_Basic_Command_1910115
             // 
             this.chType.Text = "Loại";
             this.chType.Width = 100;
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmiDelete,
+            this.tsmiViewFood});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(233, 52);
+            // 
+            // tsmiDelete
+            // 
+            this.tsmiDelete.Name = "tsmiDelete";
+            this.tsmiDelete.Size = new System.Drawing.Size(232, 24);
+            this.tsmiDelete.Text = "Xóa nhóm sản phẩm";
+            this.tsmiDelete.Click += new System.EventHandler(this.tsmiDelete_Click);
+            // 
+            // tsmiViewFood
+            // 
+            this.tsmiViewFood.Name = "tsmiViewFood";
+            this.tsmiViewFood.Size = new System.Drawing.Size(232, 24);
+            this.tsmiViewFood.Text = "Xem danh sách món ăn";
+            this.tsmiViewFood.Click += new System.EventHandler(this.tsmiViewFood_Click);
             // 
             // label1
             // 
@@ -174,34 +200,43 @@ namespace Lab6_Basic_Command_1910115
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
-            // contextMenuStrip1
+            // btnBillsForm
             // 
-            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsmiDelete,
-            this.tsmiViewFood});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(233, 80);
+            this.btnBillsForm.Location = new System.Drawing.Point(475, 10);
+            this.btnBillsForm.Name = "btnBillsForm";
+            this.btnBillsForm.Size = new System.Drawing.Size(155, 28);
+            this.btnBillsForm.TabIndex = 11;
+            this.btnBillsForm.Text = "Xem hóa đơn";
+            this.btnBillsForm.UseVisualStyleBackColor = true;
+            this.btnBillsForm.Click += new System.EventHandler(this.btnBillsForm_Click);
             // 
-            // tsmiDelete
+            // btnAccount
             // 
-            this.tsmiDelete.Name = "tsmiDelete";
-            this.tsmiDelete.Size = new System.Drawing.Size(232, 24);
-            this.tsmiDelete.Text = "Xóa nhóm sản phẩm";
-            this.tsmiDelete.Click += new System.EventHandler(this.tsmiDelete_Click);
+            this.btnAccount.Location = new System.Drawing.Point(475, 45);
+            this.btnAccount.Name = "btnAccount";
+            this.btnAccount.Size = new System.Drawing.Size(155, 28);
+            this.btnAccount.TabIndex = 12;
+            this.btnAccount.Text = "Xem tài khoản";
+            this.btnAccount.UseVisualStyleBackColor = true;
+            this.btnAccount.Click += new System.EventHandler(this.btnAccount_Click);
             // 
-            // tsmiViewFood
+            // btnTable
             // 
-            this.tsmiViewFood.Name = "tsmiViewFood";
-            this.tsmiViewFood.Size = new System.Drawing.Size(232, 24);
-            this.tsmiViewFood.Text = "Xem danh sách món ăn";
-            this.tsmiViewFood.Click += new System.EventHandler(this.tsmiViewFood_Click);
+            this.btnTable.Location = new System.Drawing.Point(475, 82);
+            this.btnTable.Name = "btnTable";
+            this.btnTable.Size = new System.Drawing.Size(155, 28);
+            this.btnTable.TabIndex = 13;
+            this.btnTable.Text = "Xem bàn";
+            this.btnTable.UseVisualStyleBackColor = true;
             // 
-            // Form1
+            // CategoryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 507);
+            this.Controls.Add(this.btnTable);
+            this.Controls.Add(this.btnAccount);
+            this.Controls.Add(this.btnBillsForm);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnAdd);
@@ -213,7 +248,7 @@ namespace Lab6_Basic_Command_1910115
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lvCategory);
             this.Controls.Add(this.btnLoad);
-            this.Name = "Form1";
+            this.Name = "CategoryForm";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.contextMenuStrip1.ResumeLayout(false);
@@ -241,6 +276,9 @@ namespace Lab6_Basic_Command_1910115
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem tsmiDelete;
         private System.Windows.Forms.ToolStripMenuItem tsmiViewFood;
+        private System.Windows.Forms.Button btnBillsForm;
+        private System.Windows.Forms.Button btnAccount;
+        private System.Windows.Forms.Button btnTable;
     }
 }
 
